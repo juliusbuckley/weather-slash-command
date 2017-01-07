@@ -16,16 +16,16 @@ export default function(req, res) {
   axios.get(apiUrl)
     .then((response) => {
       const data = response.data;
-      const imagePath = `/images/${response.data.weather[0].icon}.png`;
+      const icon = response.data.weather[0].icon + 'png';
       const html = [
-        `<img src=${imagePath}>
+        `<img src=/images/${icon}>
         <span>Temp: ${data.main.temp}</span>
         <span>High: ${data.main.temp_max}</span>
         <span>Low: ${data.main.temp_min}</span>
         <span>Description: ${data.weather[0].description}</span>`
       ].join('');
       res.json({
-        body: html
+        body: `<img src=/images/${icon}>`
       });
     })
     .catch((err) => { console.log(`Error: ${err}`); });
