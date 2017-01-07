@@ -9,11 +9,7 @@ import typeahead from './api/typeahead';
 import resolver from './api/resolver';
 import path from 'path';
 
-const app = express();
-const port = process.env.PORT || 8080;
 
-// Render static assets route
-app.use(express.static(path.join(__dirname, '/public')));
 
 const corsOptions = {
   origin: /^[^.\s]+\.mixmax\.com$/,
@@ -21,8 +17,11 @@ const corsOptions = {
 };
 
 pem.createCertificate({days: 1, selfSigned: true}, (err, keys) => {
-  var app = express();
+  const app = express();
 
+  // Render static assets route
+  app.use(express.static(path.join(__dirname, '/public')));
+  
   // API ROUTES
   app.get('/typeahead', cors(corsOptions), typeahead);
   app.get('/resolver', cors(corsOptions), resolver);
