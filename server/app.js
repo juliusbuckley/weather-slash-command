@@ -13,7 +13,7 @@ const app = express();
 const port = process.env.PORT || 8080;
 
 // Render static assets route
-app.use(express.static(path.join(__dirname, './assets/resolver')));
+app.use(express.static(path.join(__dirname, '/public')));
 
 const corsOptions = {
   origin: /^[^.\s]+\.mixmax\.com$/,
