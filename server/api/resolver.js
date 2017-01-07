@@ -27,7 +27,7 @@ export default function(req, res) {
         <span>Low: ${data.main.temp_min}</span>
         <span>Description: ${data.weather[0].description}</span>`
       ].join('');
-      const html = '<img style="max-width:100%;" src="https://www.rover.com/blog/wp-content/uploads/2015/05/dog-candy-junk-food-599x340.jpg" width="' + width + '"/>';
+      const html = '<img style="max-width:100%;" src="https://192.241.218.147/images/01d.png" width="' + width + '"/>';
       res.json({
         body: html
       });
