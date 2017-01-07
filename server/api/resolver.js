@@ -17,6 +17,9 @@ export default function(req, res) {
     .then((response) => {
       const data = response.data;
       const icon = response.data.weather[0].icon + 'png';
+      const imageUrl = 'https://192.241.218.147/images/01d.png';
+      const width = 600;
+      const test = `<img style="max-width:100%;" src="${imageUrl}" width="${width}"/>`;
       const html = [
         `<img src=/images/${icon}>
         <span>Temp: ${data.main.temp}</span>
@@ -25,7 +28,7 @@ export default function(req, res) {
         <span>Description: ${data.weather[0].description}</span>`
       ].join('');
       res.json({
-        body: `<img src=https://192.241.218.147/images/01d.png}>`
+        body: test
       });
     })
     .catch((err) => { console.log(`Error: ${err}`); });
