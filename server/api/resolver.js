@@ -25,7 +25,7 @@ export default function(req, res) {
         <span>Description: ${data.weather[0].description}</span>`
       ].join('');
       res.json({
-        body: `<img src=/images/${icon}>`
+        body: `<img src=https://192.241.218.147/images/01d.png}>`
       });
     })
     .catch((err) => { console.log(`Error: ${err}`); });
