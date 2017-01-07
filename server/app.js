@@ -7,6 +7,7 @@ import fs from 'fs';
 import cors from 'cors';
 import typeahead from './api/typeahead';
 import resolver from './api/resolver';
+import path from 'path';
 
 const app = express();
 const port = process.env.PORT || 8080;
