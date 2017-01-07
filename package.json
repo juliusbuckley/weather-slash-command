@@ -4,9 +4,9 @@
   "description": "Mixmax slash command that returns the current weather for your city",
   "main": "app.js",
   "scripts": {
-    "start": "npm run prod:buildserver; node ./server-dist/app.js",
+    "start": "npm run prod:buildserver; node ./server-dist/app.js & lt --port 8080",
     "prod:buildserver": "babel ./server -d ./server-dist --presets es2015,stage-2 --copy-files",
-    "dev:start": "nodemon ./server/app.js --exec babel-node --presets es2015,stage-2",
+    "dev:start": "nodemon ./server/app.js --exec babel-node --presets es2015,stage-2 & lt --port 8080",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
