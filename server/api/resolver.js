@@ -16,7 +16,7 @@ export default function(req, res) {
   axios.get(apiUrl)
     .then((response) => {
       const data = response.data;
-      const imagePath = path.join(__dirname, `../assets/resolver/${response.data.weather[0].icon}.png`);
+      const imagePath = `${response.data.weather[0].icon}.png`;
       console.log('imagePath', imagePath);
       const html = [
         `<img src=${imagePath}>
