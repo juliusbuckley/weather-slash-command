@@ -20,8 +20,7 @@ pem.createCertificate({days: 1, selfSigned: true}, (err, keys) => {
   const app = express();
 
   // Render static assets route
-  app.use(express.static(path.join(__dirname, '/public')));
-  
+  app.use(express.static(__dirname + '/public'));
   // API ROUTES
   app.get('/typeahead', cors(corsOptions), typeahead);
   app.get('/resolver', cors(corsOptions), resolver);

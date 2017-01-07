@@ -17,7 +17,6 @@ export default function(req, res) {
     .then((response) => {
       const data = response.data;
       const imagePath = `/images/${response.data.weather[0].icon}.png`;
-      console.log('imagePath', imagePath);
       const html = [
         `<img src=${imagePath}>
         <span>Temp: ${data.main.temp}</span>
