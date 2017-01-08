@@ -5,9 +5,6 @@
  
 ![weather-slash-command Demo](./weather-slash-command.gif)
 
-# Weather Icons Credit
-Icons made by [Pixel-Buddha](http://www.flaticon.com/authors/pixel-buddha "Pixel-Buddha's Homepage") from www.flaticon.com
-
 ## Installation steps
 
 #### Environment dependencies
@@ -78,3 +75,5 @@ Start server for testing:
 # run test script
 npm test
 ```
+# Weather Icons Credit
+Icons made by [Pixel-Buddha](http://www.flaticon.com/authors/pixel-buddha "Pixel-Buddha's Homepage") from www.flaticon.com
