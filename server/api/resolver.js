@@ -17,9 +17,9 @@ export default function(req, res) {
     .then((response) => {
       const data = response.data;
       const icon = data.weather[0].icon;
-      const width = 600;
+      const width = 300;
       res.json({
-        body: '<img style="max-width:100%;" src="https://192.241.218.147/images/' + icon + '.png" width="' + width + '"/> \n' + 'Temp: ' + Math.floor(data.main.temp) + 'Description: ' + data.weather[0].description
+        body: '<img style="max-width:100%;" src="https://192.241.218.147/images/' + icon + '.png" height="300" width="' + width + '"/> \n' + 'Temp: ' + Math.floor(data.main.temp) + '\nDescription: ' + data.weather[0].description
       });
     })
     .catch((err) => { console.log(`Error: ${err}`); });
