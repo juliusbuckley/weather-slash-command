@@ -9,30 +9,20 @@ import typeahead from './api/typeahead';
 import resolver from './api/resolver';
 import path from 'path';
 
-
-
 const corsOptions = {
   origin: /^[^.\s]+\.mixmax\.com$/,
   credentials: true
 };
 
-// pem.createCertificate({days: 1, selfSigned: true}, (err, keys) => {
-//   const app = express();
+pem.createCertificate({days: 1, selfSigned: true}, (err, keys) => {
+  const app = express();
 
-//   // Render static assets route
-//   app.use(express.static(__dirname + '/public'));
-//   // API ROUTES
-//   app.get('/typeahead', cors(corsOptions), typeahead);
-//   app.get('/resolver', cors(corsOptions), resolver);
+  // Render static assets route
+  app.use(express.static(__dirname + '/public'));
+  // API ROUTES
+  app.get('/typeahead', cors(corsOptions), typeahead);
+  app.get('/resolver', cors(corsOptions), resolver);
 
-//   // create https service
-//   https.createServer({key: keys.serviceKey, cert: keys.certificate}, app).listen(443);
-// });
-
-const app = express();
-// Render static assets route
-app.use(express.static(__dirname + '/public'));
-// API ROUTES
-app.get('/typeahead', cors(corsOptions), typeahead);
-app.get('/resolver', cors(corsOptions), resolver);
-app.listen(8080);
+  // create https service
+  https.createServer({key: keys.serviceKey, cert: keys.certificate}, app).listen(443);
+});
