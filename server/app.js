@@ -16,13 +16,11 @@ const corsOptions = {
 
 pem.createCertificate({days: 1, selfSigned: true}, (err, keys) => {
   const app = express();
-
   // Render static assets route
   app.use(express.static(__dirname + '/public'));
   // API ROUTES
   app.get('/typeahead', cors(corsOptions), typeahead);
   app.get('/resolver', cors(corsOptions), resolver);
-
   // create https service
   https.createServer({key: keys.serviceKey, cert: keys.certificate}, app).listen(443);
 });

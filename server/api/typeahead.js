@@ -1,6 +1,5 @@
 import axios from 'axios';
 import qs from 'querystring';
-
 export default function(req, res) {
   const term = req.query.text.trim();
   if (!term) {

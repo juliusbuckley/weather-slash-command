@@ -1,7 +1,6 @@
 import axios from 'axios';
 import qs from 'querystring';
 import path from 'path';
-
 export default function(req, res) {
   const term = req.query.text.trim();
   // CREATE QUERY STRING AND MAKE REQUEST TO OPEN WEATHER MAP API
