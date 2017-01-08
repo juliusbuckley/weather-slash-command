@@ -78,8 +78,8 @@ npm test
 
 ## APIs used
 > Documentaion for APIs used
-![Mixmax -- Integration API](http://developer.mixmax.com/docs/getting-started "Mixmax -- Integration API")
-![OpenWeatherMap -- Weather API](http://openweathermap.org/current "OpenWeatherMap -- Weather API")
+[Mixmax -- Integration API](http://developer.mixmax.com/docs/getting-started "Mixmax -- Integration API")
+[OpenWeatherMap -- Weather API](http://openweathermap.org/current "OpenWeatherMap -- Weather API")
 
 # Weather Icons Credit
 Icons made by [Pixel-Buddha](http://www.flaticon.com/authors/pixel-buddha "Pixel-Buddha's Homepage") from www.flaticon.com
