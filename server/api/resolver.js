@@ -19,11 +19,7 @@ export default function(req, res) {
       const icon = data.weather[0].icon + 'png';
       const width = 600;
       const html = [
-        '<img style="max-width:100%;" src="https://192.241.218.147/images/' + icon + '" width="' + width + '/>',
-        '<span>Temp: ' + data.main.temp + '</span>',
-        '<span>High: ' + data.main.temp_max + '</span>',
-        '<span>Low: ' + data.main.temp_min + '</span>',
-        '<span>Description: ' + data.weather[0].description + '</span>'
+        `<img style="max-width:100%;" src="https://192.241.218.147/images/${icon}" width="${width}"/><span>Temp: ${data.main.temp}</span><span>High: ${data.main.temp_max}</span><span>Low: ${data.main.temp_min}</span><span>Description: ${data.weather[0].description}</span>`
       ].join('');
       res.json({
         body: html
