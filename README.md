@@ -3,7 +3,7 @@
 ## What is weather-slash-command?
  > A Mixmax slash command that returns the current weather for any city
  
-![weather-slash-command Demo](./weather-slash-command.gif)
+![weather-slash-command Demo](./weather-slash-command.gif "weather-slash-command Demo gif")
 
 ## Installation steps
 
@@ -75,5 +75,11 @@ Start server for testing:
 # run test script
 npm test
 ```
+
+## APIs used
+> Documentaion for APIs used
+![Mixmax -- Integration API](http://developer.mixmax.com/docs/getting-started "Mixmax -- Integration API")
+![OpenWeatherMap -- Weather API](http://openweathermap.org/current "OpenWeatherMap -- Weather API")
+
 # Weather Icons Credit
 Icons made by [Pixel-Buddha](http://www.flaticon.com/authors/pixel-buddha "Pixel-Buddha's Homepage") from www.flaticon.com
