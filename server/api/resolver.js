@@ -21,7 +21,7 @@ export default function(req, res) {
       const imageUrl = '<img style="max-width:100%;" src="https://192.241.218.147/images/' + icon + '" width="' + width + '"/>';
       const html = `<img style=max-width:100%; src=https://192.241.218.147/images/${icon} width="${width}"/> <span>Temp: ${data.main.temp}</span><span> High: ${data.main.temp_max}</span><span> Low: ${data.main.temp_min}</span><span> Description: ${data.weather[0].description}</span>`;
       res.json({
-        body: '<img style="max-width:100%;" src="' + 'https://192.241.218.147/images/' + icon + ' + " width="' + width + '"/> + temp + description'
+        body: '<img style="max-width:100%;" src="https://www.rover.com/blog/wp-content/uploads/2015/05/dog-candy-junk-food-599x340.jpg" width="' + width + '"/> + \n temp + description'
       });
     })
     .catch((err) => { console.log(`Error: ${err}`); });
