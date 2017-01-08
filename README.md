@@ -35,7 +35,7 @@ git clone https://github.com/juliusbuckley/weather-slash-command.git
 
 #### Project dependencies
 
-Install project dependencies and transpile server folder:
+Install project dependencies:
 ```sh
 # run install script
 npm install
@@ -58,7 +58,7 @@ npm run dev:start
 ```
 #### Production
 
-Start server: 
+Transpile server folder and start app: 
 ```sh
 # run prod start script
 npm start
