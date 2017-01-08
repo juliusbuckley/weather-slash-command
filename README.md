@@ -77,8 +77,9 @@ npm test
 ```
 
 ## APIs used
-> Documentaion for APIs used
+> Documentation for:
 [Mixmax -- Integration API](http://developer.mixmax.com/docs/getting-started "Mixmax -- Integration API")
+> Documentation for:
 [OpenWeatherMap -- Weather API](http://openweathermap.org/current "OpenWeatherMap -- Weather API")
 
 # Weather Icons Credit
