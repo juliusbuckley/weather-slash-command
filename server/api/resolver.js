@@ -16,18 +16,15 @@ export default function(req, res) {
   axios.get(apiUrl)
     .then((response) => {
       const data = response.data;
-      const icon = response.data.weather[0].icon + 'png';
-      const imageUrl = 'https://192.241.218.147/images/01d.png';
+      const icon = data.weather[0].icon + 'png';
       const width = 600;
-      const test1 = `<img style="max-width:100%;" src="${imageUrl}" width="${width}"/>`;
-      const html1 = [
-        `<img src=/images/${icon}>
-        <span>Temp: ${data.main.temp}</span>
-        <span>High: ${data.main.temp_max}</span>
-        <span>Low: ${data.main.temp_min}</span>
-        <span>Description: ${data.weather[0].description}</span>`
+      const html = [
+        '<img style="max-width:100%;" src="https://192.241.218.147/images/' + icon + '" width="' + width + '/>',
+        '<span>Temp: ' + data.main.temp + '</span>',
+        '<span>High: ' + data.main.temp_max + '</span>',
+        '<span>Low: ' + data.main.temp_min + '</span>',
+        '<span>Description: ' + data.weather[0].description + '</span>'
       ].join('');
-      const html = '<img style="max-width:100%;" src="https://192.241.218.147/images/01d.png" width="' + width + '"/>';
       res.json({
         body: html
       });
