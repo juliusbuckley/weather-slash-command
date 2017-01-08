@@ -21,7 +21,7 @@ app.get('/resolver', cors(corsOptions), resolver);
 
 pem.createCertificate({days: 1, selfSigned: true}, (err, keys) => {
   // create https service
-  https.createServer({key: keys.serviceKey, cert: keys.certificate}, app).listen(4443);
+  https.createServer({key: keys.serviceKey, cert: keys.certificate}, app).listen(443);
 });
 
 export default app;
