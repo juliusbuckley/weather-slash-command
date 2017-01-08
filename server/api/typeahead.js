@@ -23,7 +23,7 @@ export default function(req, res) {
     .then((response) => {
       let results = [
         {
-          title: `<img style=height:50px vertical-align=top src=http://openweathermap.org/img/w/${response.data.weather[0].icon}.png> <span style=height:50px>${response.data.name}, ${response.data.sys.country}</span>`,
+          title: '<img style="max-width:100% vertical-align:text-bottom" src="https://192.241.218.147/images/' + response.data.weather[0].icon + '.png" height="50" width="50"/> <span style=height:50px>' + response.data.name + ', ' + response.data.sys.country + '</span>',
           text: term
         }
       ];
